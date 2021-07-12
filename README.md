@@ -3,7 +3,7 @@
 This calculator was made by a tutorial, 
 Made in CSS, HTML and JavaScript.
 
-![Watch the video](screenCalculator.mov)
+![Screenshot of calculator](scrrenshot-calculator.png)
 
 ### Things I learned
 1. How to use dataset property to obatin an attribute.

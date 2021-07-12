@@ -52,7 +52,7 @@ keys.addEventListener('click', event => {
 
     if (action !== 'clear') {
       const clearButton = calculator.querySelector('[data-action=clear]');
-      clearButton.textContent = 'CE';
+      clearButton.textContent = 'CE'
     }
 
     if (action === 'clear') {
@@ -83,16 +83,21 @@ keys.addEventListener('click', event => {
       calculator.dataset.previousKeyType = 'calculate';
     }
 
-    Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'));
+    Array.from(key.parentNode.children) .forEach(k => k.classList.remove('is-depressed'));
   }
 })
 
 const calculate = (n1, operator, n2) => {
-  const firstNum = parseFloat(n1)
-  const secondNum = parseFloat(n1)
-  if (operator === 'add') return firstNum + secondNum;
-  if (operator === 'subtract') return firstNum - secondNum;
-  if (operator === 'multiply') return firstNum * secondNum;
-  if (operator === 'divide') return firstNum / secondNum;
+  let result = '';
+  if (operator === 'add') {
+    result = parseFloat(n1) + parseFloat(n2);
+  } else if (operator === 'subtract') {
+    result = parseFloat(n1) - parseFloat(n2);
+  } else if (operator === 'multiply') {
+    result = parseFloat(n1) * parseFloat(n2);
+  } else if (operator === 'divide') {
+    result = parseFloat(n1) / parseFloat(n2);
+  }
+  return result;
 }
 
